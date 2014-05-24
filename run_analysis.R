@@ -37,6 +37,8 @@ run_analysis<-function(){
        #Average 
        average_tidy_data<-aggregate(x=tidy.data[,-1:-2],by=list(subject=tidy.data$subject,activity=tidy.data$activity),FUN=mean)
        
+      
+       write.table(average_tidy_data,"/Users/iambigmomma/Desktop/Coursera/Getting and Cleaning Data Course Project/tidy_data.txt",sep="\t")
        return (average_tidy_data)
        
         
